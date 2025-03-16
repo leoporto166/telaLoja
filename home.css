@@ -7,36 +7,37 @@
 
 header{
     background-color: rgb(107, 107, 241);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+   background-image: url(imagens/lavanda.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
     width: 100%;
-
+    height: 350px;
+   
 
 
 }
-header > h1{
+menu > h1{
     
     text-align: center;
     color: white;
     padding: 20px;
+  
 }
-menu{
-    background-color: rgb(107, 107, 241);
+menu{ 
+    background-color: rgb(150, 150, 231);
+    width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    align-content: flex-end;
- 
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    
 }
 menu > a{
     text-decoration: none;
     color: white;
-    margin: 5px;
-    
+    margin-right: 10px;
     
 }
 menu > a:hover{
@@ -49,16 +50,25 @@ menu > a#tec:hover{
 }
 main{
 
-    background-color: rgb(187, 191, 207);
+    background-color: rgb(241, 241, 241);
 
 
+}
+
+h2{
+    padding: 40px 5px 10px;
+    font-size: 2em;
+}
+
+p{
+    margin: 0px 5px;
 }
 
 main > section {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start; /* Alinha os divs ao topo */
     padding: 10px 0px;
     width: 100%;
@@ -70,17 +80,21 @@ main > section > div {
     align-items: center; /* Mantém a imagem centralizada */
     justify-content: start; /* Garante espaço entre imagem e texto */
     
-    width: auto;
-    height: 200px; /* Ajuste conforme necessário */
-    margin: 0px 20px;
-    background-color: rgb(255, 255, 255);
+    width: 36%;
+    height: 350px;
+    
+    margin: 20px;
+    background-color: rgb(241, 241, 241);
     border-radius: 10px;
     padding: 10px 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.185);
 }
 
+
+
 div > img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 150px;
 }
 
 div > a {
@@ -88,14 +102,29 @@ div > a {
     font-weight: bold;
     margin-top: auto; /* Empurra o texto para baixo */
     padding: 5px; /* Dá um espaçamento da borda esquerda */
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color: rgba(127, 140, 211, 0.205);
     border-radius: 5px;
     text-decoration: none;
     color: black;
+    font-size: 1.2em;
+}
+
+div > h2{
+    align-self: flex-start;
+    font-size: 1.3em;
+    margin: 3px;
+    font-weight: 400;
+}
+
+div > p{
+    align-self: flex-start;
+    margin: 3px;
+    font-weight: bolder;
+    margin-top: 20px;
 }
 
 div > a:hover{
-    background-color: rgb(77, 77, 248);
+    background-color: rgb(125, 125, 230);
     color: white;
     transition: 0.5s;
 }
