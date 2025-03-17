@@ -1,27 +1,27 @@
 @charset "UTF-8";
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
 header {
     background-color: rgb(107, 107, 241);
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(46, 46, 46)), url(imagens/fundoteste2.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(46, 46, 46)), url(imagens/fundoteste2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 350px;
 }
-menu > h1{
-    
+
+menu > h1 {
     text-align: center;
     color: white;
     padding: 20px;
-  
 }
-menu{ 
+
+menu {
     background-color: rgb(173, 216, 230);
     width: 100%;
     display: flex;
@@ -30,69 +30,64 @@ menu{
     justify-content: space-between;
     position: fixed;
     z-index: 100;
-    
 }
-menu > a{
+
+menu > a {
     text-decoration: none;
     color: white;
     margin-right: 10px;
-    
 }
-menu > a:hover{
+
+menu > a:hover {
     color: black;
     transition: 0.6s;
 }
-menu > a#tec:hover{
+
+menu > a#tec:hover {
     color: rgb(0, 0, 0);
     transition: 0.6s;
 }
-main{
+
+main {
     background-color: rgb(241, 241, 241);
 }
 
-h2{
+h2 {
     padding: 40px 5px 10px;
     font-size: 2em;
 }
 
-p{
+p {
     margin: 0px 5px;
 }
 
-p#resul{
+p#resul {
     margin-top: 10px;
 }
 
-
-
-div.filtro{
+div.filtro {
     display: flex;
     justify-content: right;
     margin-right: 10px;
-    
 }
 
-p#filt{
+p#filt {
     font-weight: 300;
 }
 
-div.filtrar{
+div.filtrar {
     cursor: pointer;
     padding-right: 200px;
     padding-top: 5px;
     border: 1px solid #353535;
-   
     border-radius: 50px;
 }
 
-div.filtrar > p{
+div.filtrar > p {
     font-weight: 100;
     font-size: 1em;
     color: rgb(102, 102, 102);
     text-align: left;
-   
-
-    
 }
 
 .filtro-opcoes {
@@ -102,53 +97,48 @@ div.filtrar > p{
     border: 1px solid #ccc;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.3s ease, height 0.3s ease; /* Adiciona transição de altura */
+    transition: opacity 0.3s ease, height 0.3s ease;
     margin-top: 50px;
     margin-right: 20px;
-    height: 0; /* Começa com altura 0 */
+    height: 0;
     width: 230px;
-    overflow: hidden; /* Garante que o conteúdo não vaze */
+    overflow: hidden;
 }
 
-div.filtrar:hover{
+div.filtrar:hover {
     transition: 1s;
 }
 
 .filtro:hover .filtro-opcoes {
     display: block;
     opacity: 1;
-    height: auto; /* Ajusta a altura automaticamente */
-    
+    height: auto;
 }
 
-
-
 .filtro-opcoes > a.fil {
-    display: block; /* Exibe os links em blocos para melhor espaçamento */
-  /* Adiciona espaço entre os links */
-    text-decoration: none; /* Remove sublinhado padrão dos links */
+    display: block;
+    text-decoration: none;
     background-color: #f0f0f0;
     font-weight: 400;
     opacity: 1;
     transition: 1s;
 }
+
 .filtro-opcoes > a.fil:hover {
     color: black;
     width: 100%;
     border-radius: 0px;
     padding-left: 50px;
     transition: 1s;
-    transform:  translate(-10px, 0px);
- 
+    transform: translate(-10px, 0px);
 }
-
 
 main > section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start; /* Alinha os divs ao topo */
+    align-items: flex-start;
     padding: 10px 0px;
     width: 100%;
 }
@@ -157,51 +147,48 @@ main > section {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
-    display: none; /* Oculta todos os produtos inicialmente */
-  }
-  
-  .produto.ativo {
-    display: block; /* Exibe produtos filtrados */
-  }
+    display: none;
+}
 
-
+.produto.ativo {
+    display: block;
+}
 
 main > section > div {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Mantém a imagem centralizada */
-    justify-content: start; /* Garante espaço entre imagem e texto */
-    
+    justify-content: start;
     width: 36%;
-    height: 260px;
-    
+    /* Removido height: 260px; */
     margin: 20px;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
     padding: 10px 5px;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.253);
     transition: 0.8s;
-    z-index: 1
+    z-index: 1;
+}
+
+div > img {
+    width: auto;
+    height: auto; /* Remove a altura fixa da imagem */
+    object-fit: contain; /* Garante que a imagem mantenha a proporção */
+    max-height: 150px; /* Adicione uma altura máxima se necessário */
 }
 
 main > section > div:hover {
-    transform:  translate(0px, -10px);
+    transform: translate(0px, -10px);
     transition: 1s;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.185);
 }
 
 
 
-div > img {
-    width: auto;
-    height: 80px;
-}
-
 div > a {
-    align-self: flex-start; /* Garante que o texto fique alinhado à esquerda */
+    align-self: flex-start;
     font-weight: bold;
-    margin-top: auto; /* Empurra o texto para baixo */
-    padding: 5px; /* Dá um espaçamento da borda esquerda */
+    margin-top: auto;
+    padding: 5px;
     background-color: rgba(127, 140, 211, 0.205);
     border-radius: 5px;
     text-decoration: none;
@@ -209,39 +196,36 @@ div > a {
     font-size: 1.2em;
 }
 
-div > h2{
+div > h2 {
     align-self: flex-start;
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 400;
 }
 
-div > p{
+main > section > div > span {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+div > span > del {
+    margin-right: 5px;
+    background-color: transparent;
+    text-align: left;
+}
+
+div > span > span.desc {
+    background-color: rgb(25, 189, 96);
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: white;
+}
+
+div > p {
     align-self: flex-start;
     margin: 3px;
     font-weight: bolder;
     margin-top: 10px;
 }
-
-div > span> del{
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0);
-    margin-right: 18px;
-    
-    
-}
-
-div > span > span.desc{
-    background-color: rgb(25, 189, 96);
-    border-radius: 5px;
-    
-
-}
-
-div > a:hover{
-    background-color: rgb(7, 46, 24);
-    color: white;
-    transition: 0.5s;
-}
- 
  
